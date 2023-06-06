@@ -7,15 +7,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import { routes } from "./routes";
+import { Link } from "./interfaces";
 import logo from "../assets/react.svg";
 
-interface NavLink {
-  isActive: boolean;
-  isPending: boolean;
-}
-
 const Navigation = () => {
-  const isActive = ({ isActive }: NavLink) => (isActive ? "nav-active" : "");
+  const isActive = ({ isActive }: Link) => (isActive ? "nav-active" : "");
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
